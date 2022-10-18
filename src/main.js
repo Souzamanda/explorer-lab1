@@ -9,7 +9,10 @@ function setCardType(type) {
   const colors = {
     visa: ["#436D99", "#2D57F2"],
     mastercard: ["#DF6F29", "#C69347"],
-    default: ["black", "grey"]
+    elo: ["#C4793D", "#00A4E0"],
+    american: ["#2B77C1", "#9AD1F7"],
+    diners: ["#2D4F9E", "#0079BE"],
+    default: ["black", "grey"],
   }
 
   ccBgColor1.setAttribute("fill", colors[type][0])
@@ -17,4 +20,4 @@ function setCardType(type) {
   ccLogo.setAttribute("src", `cc-${type}.svg`)
 }
 
-setCardType("default")
+setCardType("diners")
