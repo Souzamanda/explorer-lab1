@@ -13,6 +13,9 @@ function setCardType(type) {
     elo: ["#C4793D", "#00A4E0"],
     american: ["#2B77C1", "#9AD1F7"],
     diners: ["#2D4F9E", "#0079BE"],
+    hiper: ["#B53E44", "#B3131B"],
+    maestro: ["#ED1B2E", "#009DDC"],
+    discover: ["#FF8C33", "#FCC899"],
     default: ["black", "grey"],
   }
 
@@ -50,28 +53,59 @@ const cardNumberPattern = {
   mask: [
     {
       mask: "0000 0000 0000 0000",
-      regex:/^4\d{0,15}/,
-      cardtype: "visa",
+      regex:
+        /^((((636368)|(438935)|(504175)|(451416)|(636297))\d{0,10})|((5067)|(4576)|(4011))\d{0,12})$/,
+      cardtype: "elo",
     },
     {
       mask: "0000 0000 0000 0000",
-      regex:/(^5[1-5]\d{0,2}|^22[2-9]\d|^2[3-7]\d{0,2})\d{0,12}/,
+      regex: /^(606282\d{10}(\d{3})?)|(3841\d{15})$/,
+      cardtype: "hiper",
+    },
+    {
+      mask: "0000 000000 0000",
+      regex: /^3(?:0([0-5]|9)|[689]\d?)\d{0,11}/,
+      cardtype: "diners",
+    },
+    {
+      mask: "0000 000000 00000",
+      regex: /^3[47]\d{0,13}/,
+      cardtype: "american",
+    },
+    {
+      mask: "0000 0000 0000 0000",
+      regex: /^(?:6011|65\d{0,2}|64[4-9]\d?)\d{0,12}/,
+      cardtype: "discover",
+    },
+    {
+      mask: "0000 0000 0000 0000",
+      regex: /(^5[1-5]\d{0,2}|^22[2-9]\d|^2[3-7]\d{0,2})\d{0,12}/,
       cardtype: "mastercard",
+    },
+    {
+      mask: "0000 0000 0000 0000",
+      regex: /^(?:5[0678]\d{0,2}|6304|67\d{0,2})\d{0,12}/,
+      cardtype: "maestro",
+    },
+    {
+      mask: "0000 0000 0000 0000",
+      regex: /^4\d{0,15}/,
+      cardtype: "visa",
     },
     {
       mask: "0000 0000 0000 0000",
       cardtype: "default",
     },
   ],
-  dispatch: function(appended, dynamicMasked) {
-    const number = (dynamicMasked.value + appended).replace(/\D/g, '')
-    const foundMask = dynamicMasked.compiledMasks.find(function(item) {
-      return number.match(item.regex);
+  dispatch: function (appended, dynamicMasked) {
+    const number = (dynamicMasked.value + appended).replace(/\D/g, "")
+    const foundMask = dynamicMasked.compiledMasks.find(function (item) {
+      return number.match(item.regex)
     })
 
-    //console.log(foundMask.cardtype)
-    return foundMask;
-  }
+    console.log(foundMask.cardtype)
+    return foundMask
+  },
 }
 const cardNumberMasked = IMask(cardNumber, cardNumberPattern)
 
@@ -81,4 +115,4 @@ const cardHolderPattern = {
 }
 const cardHolderMasked = IMask(cardHolder, cardHolderPattern)
 
-setCardType("american")
+setCardType("discover")
