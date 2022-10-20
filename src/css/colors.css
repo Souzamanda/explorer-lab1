@@ -1,0 +1,87 @@
+:root {
+  --card-number: #e8e8e8;
+  --card-labels: #ffffff;
+
+  --dark-background: #121214;
+  --dark-app: #202024;
+  --dark-border: #323238;
+  --dark-text: #e8e8e8;
+  --dark-card-text: #ffffff;
+  --dark-btn-text: #121212;
+  --dark-card: url("/cc-bg.svg");
+
+  --light-background: #f0f2fa;
+  --light-app: #e0e4f0;
+  --light-border: #e0e4f0;
+  --light-text: #1e202a;
+  --light-card-text: #000000;
+  --light-btn-text: #fcfcfc;
+  --light-card: url("/public/cc-bg-light.svg");
+
+  --toggle-bg-start: #378fe6;
+  --toggle-bg-end: #3eda82;
+  --toggle-bg-light: #aeb3cb;
+  --toggle-light: #868cac;
+  --toggle-button-light: #f0f2f9;
+  --toggle-label-light: #AEB3CB;
+
+  --background: var(--light-background);
+  --app-color: var(--light-app);
+  --border-color: var(--light-color);
+  --text-color: var(--light-text);
+  --input-text: var(--light-card-text);
+  --btn-text: var(--light-btn-text);
+  --toggle-bg: var(--toggle-bg-light);
+  --toggle-button: var(--toggle-button-light);
+  --toggle-label: var(--toggle-label-light);
+  --card-bg: var(--light-card);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--dark-background);
+    --app-color: var(--dark-app);
+    --border-color: var(--dark-color);
+    --text-color: var(--dark-text);
+    --input-text: var(--dark-card-text);
+    --btn-text: var(--dark-btn-text);
+    --toggle-bg: linear-gradient(
+      225deg,
+      var(--toggle-bg-end) 0%,
+      var(--toggle-bg-start) 98.02%
+    );
+    --toggle-button: var(--dark-background);
+    --toggle-label: var(--dark-text);
+    --card-bg: var(--dark-card);
+  }
+}
+
+body.light {
+  --background: var(--light-background);
+  --app-color: var(--light-app);
+  --border-color: var(--light-color);
+  --text-color: var(--light-text);
+  --input-text: var(--light-card-text);
+  --btn-text: var(--light-btn-text);
+  --toggle-bg: var(--toggle-bg-light);
+  --toggle-button: var(--toggle-button-light);
+  --toggle-label: var(--toggle-label-light);
+  --card-bg: var(--light-card);
+}
+
+body.dark {
+  --background: var(--dark-background);
+  --app-color: var(--dark-app);
+  --border-color: var(--dark-color);
+  --text-color: var(--dark-text);
+  --input-text: var(--dark-card-text);
+  --btn-text: var(--dark-btn-text);
+  --toggle-bg: linear-gradient(
+    225deg,
+    var(--toggle-bg-end) 0%,
+    var(--toggle-bg-start) 98.02%
+  );
+  --toggle-button: var(--dark-background);
+  --toggle-label: var(--dark-text);
+  --card-bg: var(--dark-card);
+}

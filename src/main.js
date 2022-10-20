@@ -1,5 +1,6 @@
 import "./css/index.css";
 import IMask from "imask";
+import { checkMode, setColorMode } from "./switch"
 
 const ccBgColor1 = document.querySelector(".cc-bg svg > g g:nth-child(1) path")
 const ccBgColor2 = document.querySelector(".cc-bg svg > g g:nth-child(2) path")
@@ -110,7 +111,7 @@ const cardNumberPattern = {
 const cardNumberMasked = IMask(cardNumber, cardNumberPattern)
 
 const addButton = document.querySelector('#add-card')
-addButton.addEventListener('click', () => alert('Cartao adicionado!'));
+addButton.addEventListener('click', () => alert('Card added!'));
 
 document.querySelector('form').addEventListener("submit", (e) => e.preventDefault());
 
@@ -144,4 +145,7 @@ function update(date) {
   ccExpiration.innerText = date.length === 0 ? "02/32" : date
 }
 
-setCardType("default")
+setCardType("default");
+setColorMode();
+checkMode();
+
