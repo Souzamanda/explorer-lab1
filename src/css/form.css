@@ -28,7 +28,7 @@ form input {
 
   width: 100%;
 
-  color: var(--card-text);
+  color: var(--input-text);
   text-transform: uppercase;
 }
 

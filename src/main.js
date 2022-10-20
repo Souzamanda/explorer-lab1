@@ -1,6 +1,6 @@
 import "./css/index.css";
 import IMask from "imask";
-import { setLightMode } from "./switch"
+import { checkMode, setColorMode } from "./switch"
 
 const ccBgColor1 = document.querySelector(".cc-bg svg > g g:nth-child(1) path")
 const ccBgColor2 = document.querySelector(".cc-bg svg > g g:nth-child(2) path")
@@ -146,5 +146,6 @@ function update(date) {
 }
 
 setCardType("default");
-//setLightMode();
+setColorMode();
+checkMode();
 
