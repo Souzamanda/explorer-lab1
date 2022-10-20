@@ -23,9 +23,16 @@ body {
 
   display: flex;
   place-items: center;
+  justify-content: center;
   flex-direction: column;
 
   min-height: 100vh;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
 }
 
 .flex {
@@ -51,4 +58,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+#copyright {
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 2.25rem;
+  color: var(--text-color);
+}
+
+#copyright a{
+  color: hsl(228, 45%, 44%);
 }
