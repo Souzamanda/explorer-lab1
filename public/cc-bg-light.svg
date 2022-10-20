@@ -13,8 +13,8 @@
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1119_60" result="shape"/>
 </filter>
 <linearGradient id="paint0_linear_1119_60" x1="2" y1="1.86723" x2="130.405" y2="324.142" gradientUnits="userSpaceOnUse">
-<stop stop-opacity="0.4"/>
-<stop offset="1" stop-opacity="0"/>
+<stop stop-opacity="0.6"/>
+<stop offset="1" stop-opacity="0.4"/>
 </linearGradient>
 <radialGradient id="paint1_radial_1119_60" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(2 1.86723) rotate(32.5741) scale(427.2 269.348)">
 <stop stop-color="white" stop-opacity="0.7"/>
