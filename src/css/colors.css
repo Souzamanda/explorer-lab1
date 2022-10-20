@@ -7,16 +7,67 @@
   --dark-btn-text: #121212;
 
   --light-background: #f0f2fa;
-  --light-app: #e0e4f0 ;
+  --light-app: #e0e4f0;
   --light-border: #e0e4f0;
   --light-text: #1e202a;
   --light-card-text: #000000;
   --light-btn-text: #fcfcfc;
 
+  --toggle-bg-start: hsl(210, 78%, 56%);
+  --toggle-bg-end: hsl(146, 68%, 55%);
+  --toggle-bg-light: hsl(230, 22%, 74%);
+  --toggle-light: hsl(230, 19%, 60%);
+  --toggle-button-light: hsl(228, 46%, 96%);
+
+  --background: var(--light-background);
+  --app-color: var(--light-app);
+  --border-color: var(--light-color);
+  --text-color: var(--light-text);
+  --card-text: var(--light-card-text);
+  --btn-text: var(--light-btn-text);
+  --toggle-bg: var(--toggle-bg-light);
+  --toggle-button: var(--toggle-button-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--dark-background);
+    --app-color: var(--dark-app);
+    --border-color: var(--dark-color);
+    --text-color: var(--dark-text);
+    --card-text: var(--dark-card-text);
+    --btn-text: var(--dark-btn-text);
+    --toggle-bg: linear-gradient(
+      225deg,
+      var(--toggle-bg-end) 0%,
+      var(--toggle-bg-start) 98.02%
+    );
+    --toggle-button: var(--dark-background);
+  }
+}
+
+body.light {
+  --background: var(--light-background);
+  --app-color: var(--light-app);
+  --border-color: var(--light-color);
+  --text-color: var(--light-text);
+  --card-text: var(--light-card-text);
+  --btn-text: var(--light-btn-text);
+  --toggle-bg: var(--toggle-bg-light);
+  --toggle-button: var(--toggle-button-light);
+}
+
+body.dark {
   --background: var(--dark-background);
-  --app-color: var(--dark-app);
-  --border-color: var(--dark-color);
-  --text-color: var(--dark-text);
-  --card-text: var(--dark-card-text);
-  --btn-text: var(--dark-btn-text);
+    --app-color: var(--dark-app);
+    --border-color: var(--dark-color);
+    --text-color: var(--dark-text);
+    --card-text: var(--dark-card-text);
+    --btn-text: var(--dark-btn-text);
+    --toggle-bg: linear-gradient(
+      225deg,
+      var(--toggle-bg-end) 0%,
+      var(--toggle-bg-start) 98.02%
+    );
+    --toggle-button: var(--dark-background);
 }

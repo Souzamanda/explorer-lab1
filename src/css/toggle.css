@@ -43,7 +43,7 @@
     width: 100%;
     top: 0;
     border-radius: 0.75rem;
-    background: hsl(230, 22%, 74%);
+    background: var(--toggle-bg);
     pointer-events: none;
 }
 
@@ -55,7 +55,7 @@
     width: 1.125rem;
     height: 1.125rem;
     border-radius: 50%;
-    background-color: hsl(228, 46%, 96%);
+    background-color: var(--toggle-button);
     transition: all 150ms ease-in-out;
 }
 

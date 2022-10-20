@@ -1,5 +1,6 @@
 import "./css/index.css";
 import IMask from "imask";
+import { setLightMode } from "./switch"
 
 const ccBgColor1 = document.querySelector(".cc-bg svg > g g:nth-child(1) path")
 const ccBgColor2 = document.querySelector(".cc-bg svg > g g:nth-child(2) path")
@@ -144,4 +145,6 @@ function update(date) {
   ccExpiration.innerText = date.length === 0 ? "02/32" : date
 }
 
-setCardType("default")
+setCardType("default");
+//setLightMode();
+
