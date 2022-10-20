@@ -1,6 +1,7 @@
 @import "base.css";
 @import "credit-card.css";
 @import "form.css";
+@import "toggle.css";
 
 @media (max-width: 420px) {
   :root {
@@ -9,6 +10,11 @@
 
   body {
     background: #202024;
+  }
+
+  #switch {
+    
+    margin-right: 5.125rem;    
   }
 
   #app {
@@ -25,7 +31,7 @@
 @media (min-width: 780px) {
   #app {
     grid-template-areas:
-      "A B"
+      "A A"
       "C B";
 
     width: fit-content;

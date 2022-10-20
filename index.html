@@ -15,9 +15,24 @@
     />
   </head>
   <body>
+    <div id="switch">
+      
+    </div>
+
     <div id="app">
       <header>
         <img src="logo.svg" alt="rocketpay icon" />
+        
+        <fieldset class="toggle" aria-label="theme toggle" role="radiogroup">
+        <label class="toggle-label" for="dark">Dark Mode <span class="visually-hidden">On</span></label>
+        <div class="toggle-wrapper">
+          <input class="radio" type="radio" name="theme" id="dark" />
+          <input class="radio" type="radio" name="theme" id="light" />
+          <span aria-hidden="true" class="toggle-background"></span>
+          <span aria-hidden="true" class="toggle-button"></span>
+        </div>
+        <label for="light" class="visually-hidden"></label>
+      </fieldset>
       </header>
 
       <section class="cc">

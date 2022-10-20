@@ -1,0 +1,65 @@
+#switch {
+  margin-top: 2.25rem;
+  margin-bottom: 0.5rem;
+  
+}
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.toggle {
+  display: grid;
+  grid-template-columns: 1fr 3rem;
+  border: none;
+}
+
+.toggle-label {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+.toggle-wrapper {
+  position: relative;
+  height: 1.5rem;
+}
+
+.radio {
+  opacity: 0;
+  margin: 0 -0.125rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.toggle-background {
+  display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    border-radius: 0.75rem;
+    background: hsl(230, 22%, 74%);
+    pointer-events: none;
+}
+
+.toggle-button {
+  position: absolute;
+    left: 0.188rem;
+    top: 0.188rem;
+    right: 100%;
+    width: 1.125rem;
+    height: 1.125rem;
+    border-radius: 50%;
+    background-color: hsl(228, 46%, 96%);
+    transition: all 150ms ease-in-out;
+}
+
+#light:checked ~ .toggle-button {
+  left: calc(100% - 12.5px);
+    right: 0.188rem;
+}
