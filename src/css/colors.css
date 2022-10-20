@@ -16,7 +16,7 @@
   --light-text: #1e202a;
   --light-card-text: #000000;
   --light-btn-text: #fcfcfc;
-  --light-card: url("/public/cc-bg-light.svg");
+  --light-card: url("/cc-bg-light.svg");
 
   --toggle-bg-start: #378fe6;
   --toggle-bg-end: #3eda82;
