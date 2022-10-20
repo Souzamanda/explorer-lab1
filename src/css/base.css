@@ -8,7 +8,7 @@
   font-size: 62.5%;
 
   font-family: Inter, sans-serif;
-  color: rgba(255, 255, 255, 0.87);
+  color: var(--text-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,7 +19,7 @@
 
 body {
   font-size: 1.6rem;
-  background: #121214;
+  background: var(--background);
 
   display: flex;
   place-items: center;
@@ -42,8 +42,8 @@ body {
   margin: 0 auto;
 
   padding: 2.8rem 6rem 4rem;
-  background: #202024;
-  border: 0.1rem solid #323238;
+  background: var(--app-color);
+  border: 0.1rem solid var(--border-color);
   border-radius: 0.6rem;
 }
 

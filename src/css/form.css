@@ -16,19 +16,19 @@ form label {
   line-height: 1.5rem;
   letter-spacing: 0.01px;
   text-transform: uppercase;
-  color: #e1e1e6;
+  color: var(--text-color);
 }
 
 form input {
-  background: #121214;
-  border: 1px solid #323238;
+  background: var(--background);
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   height: 41px;
   padding-inline: 1.2rem;
 
   width: 100%;
 
-  color: white;
+  color: var(--card-text);
   text-transform: uppercase;
 }
 
@@ -58,7 +58,7 @@ form button {
   font-weight: 700;
   font-size: 1.4rem;
   line-height: 1.7rem;
-  color: #121212;
+  color: var(--btn-text);
 
   transition: filter 0.3s;
 }
